@@ -6,11 +6,31 @@
   <body>
     <button id="btn"><img src="img/IMG_1234.jpeg" alt="Mon bouton clicker"></button>
     <style>
-      #btn img {
-    width: 150px;      /* Largeur fixe de ton choix */
-    max-width: 100%;   /* S'assure que ça ne dépasse pas du bouton */
-    height: auto;      /* Garde le bon ratio (pas d'image écrasée) */
-      }
+      body {
+    margin: 0;
+    display: flex;
+    justify-content: center;   /* Centre horizontalement */
+    align-items: center;       /* Centre verticalement */
+    min-height: 100vh;         /* Prend 100% de la hauteur de la fenêtre */
+    background-color: #1a1a1a; /* Optionnel : un fond sombre pour ton jeu */
+}
+
+#clicker-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#clicker-btn img {
+    width: 150px; /* Ta taille personnalisée */
+    height: auto;
+    transition: transform 0.1s;
+}
+
+#clicker-btn img:active {
+    transform: scale(0.9); /* Effet de clic */
+}
     </style>
   </body>
 </html>
